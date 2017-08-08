@@ -3,7 +3,8 @@
 Note that the API Token is not included in the repository. Before starting
  the website, inject the token as an environmental variable
 
-```export SKIPIO_API_KEY='ABCDEF...'
+```
+export SKIPIO_API_KEY="ABCDEF..."
 rails server
 ```
 
