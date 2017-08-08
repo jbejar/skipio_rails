@@ -10,7 +10,8 @@ rails server
 
 To run the tests
 
-```rake db:create
+```
+rake db:create
 rake test
 ```
 
