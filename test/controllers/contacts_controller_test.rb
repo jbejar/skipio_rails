@@ -7,12 +7,12 @@ class ContactsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should get view" do
-    get contacts_view_url(1)
+    get contacts_view_url('d173752b-cb0c-4602-bdd9-a802023358de')
     assert_response :success
   end
 
-  test "should get send_sms" do
-    get contacts_send_sms_url
+  test "should send_sms" do
+    post contacts_view_url('d173752b-cb0c-4602-bdd9-a802023358de')
     assert_response :success
   end
 

@@ -1,2 +1,13 @@
-<h1>Contacts#view</h1>
-<p>Find me in app/views/contacts/view.html.erb</p>
+<h1><%= @contact['full_name']%></h1>
+<dl>
+  <dt>E-mail</dt>
+  <dd><%=@contact['email']%></dd>
+  <dt>Mobile Phone</dt>
+  <dd><%=@contact['phone_mobile']%></dd>
+</dl>
+<h3>Send Message:</h3>
+<%= form_tag do %>
+  <%= label_tag(:msg, "Message:") %>
+  <%= text_area_tag(:msg) %>
+  <%= submit_tag("Send") %>
+<% end %>

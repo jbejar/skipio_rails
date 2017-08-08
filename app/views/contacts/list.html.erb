@@ -1,2 +1,8 @@
-<h1>Contacts#list</h1>
-<p>Find me in app/views/contacts/list.html.erb</p>
+
+<h1>My Contacts</h1>
+
+<% @contacts.each do |contact| %>
+<a href="<%=contacts_view_url(contact['id'])%>"><h3><%=contact['full_name']%></h3></a>
+<p>
+  <%= contact%>
+<% end %>
