@@ -20,6 +20,18 @@ class ContactsController < ApplicationController
   end
 
   def send_sms
-    
+    id = params['id']
+    payload = {recipients: ["contact-#{id}"],
+    message: {
+      body: "Test message"
+      }}.to_json
+    response = self.class.post("https://stage.skipio.com/api/v2/messages",
+      :body => payload,
+      :headers => {'Content-Type' => 'application/json' },
+      :query => {'token' => SKIPIO_API_KEY}
+    )
+    if response.response.code != "201"
+      raise ActionController::RoutingError.new('Could not send')
+    end
   end
 end
