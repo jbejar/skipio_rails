@@ -1,24 +1,19 @@
-# README
+# Skills assesment
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Note that the API Token is not included in the repository. To run the website
+run
 
-Things you may want to cover:
+```rails server
+```
 
-* Ruby version
+To run the tests
 
-* System dependencies
+```rake db:create
+rake test
+```
 
-* Configuration
+Note: Tests and UI are not extensive, but could be expanded upon.
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+This was my first experience with Ruby. Please check out our last
+open source project with [MIT Open Ag](https://github.com/openagfarm/openag_cloud)
+It uses React for the front-end with Python for the back-end.
